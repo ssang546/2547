@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="ttps://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png""
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('4d394a551dcb3a49e547d33d2fc8070f');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '미래에셋10만투자 리워드상품알림',
+        description: '변화 하고 싶으면 지금 당장 변하셔야 됩니다 늦은 때는 절대 없습니다. 보람있는 인생을 살고 싶으세요? 후회하는 인생을 살고 싶으세요? 시대에 맞추어 미리미리 준비 해야 됩니다! ▶10만원으로도 충분히 시작 가능 합니다!#은퇴자금 #노후준비 #십만원으로 #시작하자 항상 진실을 진심으로 전하겠습니다',
+        imageUrl:
+          'http://k.kakaocdn.net/dn/bAvZ8a/btsIGwBcNF4/5SGzZ9ZiKpUQoRqX6gvsjk/img_l.jpg',
+        link: {
+          mobileWebUrl: 'https://vvd.bz/e0gT',
+          webUrl: 'https://vvd.bz/e0gT',
+        },
+      },
+      social: {
+        likeCount: 985, //99999가 최대입니다
+        commentCount: 980, //99999가 최대입니다
+        sharedCount: 570, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '리워드상품문의!',
+          link: {
+            mobileWebUrl: 'https://vvd.bz/e0gT',
+            webUrl: 'https://vvd.bz/e0gT',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
